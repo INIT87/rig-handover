@@ -39,11 +39,7 @@ export type NightDigest = {
  * Returns null when the night is not `YYYY-MM-DD` or the file is absent.
  * An empty file returns rows `[]`, badLines `0`.
  */
-export function readNight(runsDir: string, night: string): NightDigest | null {
-  void runsDir;
-  void night;
-  throw new Error('readNight is not implemented');
-}
+export { readNight } from './read.js';
 
 /** The one order the page and the JSON both use. */
 export function rowsInPageOrder(rows: DigestRow[]): DigestRow[] {
